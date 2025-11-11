@@ -1,22 +1,23 @@
-/* NAVIGATION BAR */
 nav {
   background-color: darkblue;
   padding: 10px;
 }
 
-/* Each link inside the nav */
 nav a {
   color: white;
   display: block;
   padding: 20px;
 }
 
-/* HEADING STYLE */
+main {
+    max-width: 840px;  
+    margin: 0 auto;   
+}
+
 h1 {
   color: darkblue;
 }
 
-/* IMAGE STYLE */
 img {
   width: 150px;
   height: auto;
@@ -25,7 +26,29 @@ img {
   box-shadow: 0 0 30px gray;
 }
 
-/* PARAGRAPH STYLE */
 p {
-  padding: 10px;
+  padding: 0;
+}
+
+
+aside {
+    width: 250px;              
+    margin: 20px auto;          
+    border: 1px solid rgb(0 0 0 / 0.2);     
+    padding: 15px;              
+    background-color: #f4f4f4;   
+    color: #333;
+    text-align: center;                
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
 }
