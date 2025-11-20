@@ -75,7 +75,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Box Class - reused for aside and UL */
+/* Box Class - reusable for aside and UL */
 .box {
   margin: var(--box-margin);
   padding: var(--aside-padding);
