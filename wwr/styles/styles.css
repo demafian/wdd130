@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #219EBC;
+    --secondary-color: #023047;
+    --accent-color: #FFB703;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --font-family: Arial, sans-serif;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+header img {
+    height: 60px;
+    background: transparent;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* HERO SECTION — WDD130 REQUIREMENT VERSION */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Required hero image */
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* Heading overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(255, 183, 3, 0.75); /* accent */
+    color: #fff;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+/* Article overlay */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(33, 158, 188, 0.75); /* primary w/ overlay */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+/* Only the image inside hero article */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 15px;
+    border-radius: 8px;
+}
+
+/* Clear float */
+.hero article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* MAIN CONTENT */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+/* FOOTER */
+footer {
+    background: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer nav.socialmedia img {
+    width: 25px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
