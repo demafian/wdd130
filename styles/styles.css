@@ -32,13 +32,15 @@ nav a {
   display: inline-block;
   padding: var(--nav-link-padding);
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;          /* Smooth transition for hover effects */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover {
-background-color: var(--text-color);
-color: var(--primary-color);
-border-radius: 4px;
+nav a:hover,
+nav a:focus {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  border-radius: 4px;
+  outline: none;
 }
 
 /* Main Content */
@@ -73,14 +75,19 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Aside Section */
-aside.box {
-  width: 250px;
-  margin: var(--box-margin) auto;
+/* Box Class - reused for aside and UL */
+.box {
+  margin: var(--box-margin);
   padding: var(--aside-padding);
   border: 1px solid var(--border-color);
   background-color: var(--aside-bg);
   color: var(--aside-text);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Aside Section */
+aside.box {
+  width: 250px;
   text-align: center;
   position: relative;
 }
@@ -99,20 +106,38 @@ aside h2.overlay {
   border-radius: 4px;
 }
 
-/* Box List */
-ul.box {
-  list-style-type: disc;
-  margin: var(--box-margin);
-  padding: var(--aside-padding);
-  border: 1px solid var(--border-color);
-  background-color: var(--aside-bg);
-  color: var(--aside-text);
-}
-
 /* Footer */
 footer {
   margin-top: 20px;
   border-top: 1px solid var(--footer-border);
   text-align: center;
   padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  main img {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 100%;
+    max-width: 150px;
+  }
+
+  aside h2.overlay {
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+  }
+
+  .box {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
 }
