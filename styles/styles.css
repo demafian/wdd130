@@ -1,143 +1,151 @@
 /* Universal Selector */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* CSS Variables */
 :root {
-  --primary-color: darkblue;
-  --text-color: white;
-  --aside-bg: #f4f4f4;
-  --aside-text: #222;
-  --border-color: rgba(0,0,0,0.2);
-  --footer-border: #ccc;
-  --img-border: black;
-  --box-shadow: 0 0 30px gray;
-  --nav-padding: 10px;
-  --nav-link-padding: 20px;
-  --aside-padding: 1rem;
-  --box-margin: 1rem;
+    --primary-color: darkblue;
+    --text-color: white;
+    --aside-bg: #f4f4f4;
+    --aside-text: #222;
+    --border-color: rgba(0,0,0,0.2);
+    --footer-border: #ccc;
+    --img-border: black;
+    --box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    --nav-padding: 10px;
+    --nav-link-padding: 15px 20px;
+    --aside-padding: 1rem;
+    --box-margin: 1rem;
 }
 
 /* Navigation */
 nav {
-  background-color: var(--primary-color);
-  padding: var(--nav-padding);
+    background-color: var(--primary-color);
+    padding: var(--nav-padding);
+    text-align: center;
 }
 
 nav a {
-  color: var(--text-color);
-  display: inline-block;
-  padding: var(--nav-link-padding);
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+    color: var(--text-color);
+    display: inline-block;
+    padding: var(--nav-link-padding);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover,
 nav a:focus {
-  background-color: var(--text-color);
-  color: var(--primary-color);
-  border-radius: 4px;
-  outline: none;
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    outline: none;
 }
 
 /* Main Content */
 main {
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 1rem;
+    max-width: 840px;
+    margin: 1rem auto;
+    padding: 1rem;
 }
 
 main::after {
-  content: "";
-  display: block;
-  clear: both;
+    content: "";
+    display: block;
+    clear: both;
 }
 
 h1 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
-main img {
-  float: right;
-  margin-left: 1rem;
-  width: 150px;
-  height: auto;
-  border: 1px solid var(--img-border);
-  padding: 2px;
-  box-shadow: var(--box-shadow);
+.profile-img {
+    float: right;
+    margin-left: 1rem;
+    width: 150px;
+    height: auto;
+    border: 1px solid var(--img-border);
+    padding: 2px;
+    box-shadow: var(--box-shadow);
 }
 
 p {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
-/* Box Class - reusable for aside and UL */
+/* Box Class - for aside and ul lists */
 .box {
-  margin: var(--box-margin);
-  padding: var(--aside-padding);
-  border: 1px solid var(--border-color);
-  background-color: var(--aside-bg);
-  color: var(--aside-text);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin: var(--box-margin);
+    padding: var(--aside-padding);
+    border: 1px solid var(--border-color);
+    background-color: var(--aside-bg);
+    color: var(--aside-text);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Aside Section */
 aside.box {
-  width: 250px;
-  text-align: center;
-  position: relative;
+    width: 250px;
+    text-align: center;
+    position: relative;
 }
 
 aside img {
-  width: 200px;
-  height: auto;
+    width: 200px;
+    height: auto;
 }
 
 aside h2.overlay {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: rgba(255,255,255,0.7);
-  padding: 0.5rem;
-  border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+/* Unordered List */
+ul.temple-list {
+    list-style-type: disc;
+    margin: var(--box-margin) 0;
+    padding: var(--aside-padding);
 }
 
 /* Footer */
 footer {
-  margin-top: 20px;
-  border-top: 1px solid var(--footer-border);
-  text-align: center;
-  padding: 10px;
+    margin-top: 20px;
+    border-top: 1px solid var(--footer-border);
+    text-align: center;
+    padding: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
-  main img {
-    float: none;
-    display: block;
-    margin: 0 auto 1rem auto;
-    width: 100%;
-    max-width: 150px;
-  }
+    .profile-img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem auto;
+        width: 100%;
+        max-width: 150px;
+    }
 
-  aside h2.overlay {
-    position: static;
-    background-color: transparent;
-    padding: 0;
-    margin-bottom: 0.5rem;
-  }
+    aside h2.overlay {
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 0.5rem;
+    }
 
-  nav a {
-    display: block;
-    padding: 10px;
-  }
+    nav a {
+        display: block;
+        padding: 10px;
+    }
 
-  .box {
-    width: 90%;
-    margin: 0.5rem auto;
-  }
+    .box {
+        width: 90%;
+        margin: 0.5rem auto;
+    }
 }
