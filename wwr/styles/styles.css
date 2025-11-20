@@ -48,14 +48,13 @@ nav a:hover {
     color: var(--accent-color);
 }
 
-/* HERO SECTION — WDD130 REQUIREMENT VERSION */
+/* HERO SECTION */
 .hero {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-/* Required hero image */
 .hero img {
     display: block;
     width: 100%;
@@ -79,7 +78,7 @@ nav a:hover {
     width: 100%;
     padding: 16px;
     text-align: center;
-    background-color: rgba(255, 183, 3, 0.75); /* accent */
+    background-color: rgba(255, 183, 3, 0.75);
     color: #fff;
     font-size: 3rem;
     z-index: 2;
@@ -91,22 +90,21 @@ nav a:hover {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background: rgba(33, 158, 188, 0.75); /* primary w/ overlay */
+    background: rgba(33, 158, 188, 0.75);
     color: white;
     padding: 20px;
     border-radius: 8px;
     z-index: 2;
 }
 
-/* Only the image inside hero article */
 .hero article img {
     float: right;
     width: 125px;
     margin-left: 15px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Clear float */
 .hero article::after {
     content: "";
     display: block;
