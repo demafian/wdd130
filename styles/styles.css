@@ -1,17 +1,27 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
 :root {
   --primary-color: darkblue;
   --text-color: white;
   --aside-bg: #f4f4f4;
-  --aside-text: #333;
+  --aside-text: #222;
   --border-color: rgba(0,0,0,0.2);
   --footer-border: #ccc;
   --img-border: black;
   --box-shadow: 0 0 30px gray;
   --nav-padding: 10px;
   --nav-link-padding: 20px;
-  --aside-padding: 15px;
+  --aside-padding: 1rem;
+  --box-margin: 1rem;
 }
 
+/* Navigation */
 nav {
   background-color: var(--primary-color);
   padding: var(--nav-padding);
@@ -19,20 +29,39 @@ nav {
 
 nav a {
   color: var(--text-color);
-  display: block;
+  display: inline-block;
   padding: var(--nav-link-padding);
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;          /* Smooth transition for hover effects */
 }
 
+nav a:hover {
+background-color: var(--text-color);
+color: var(--primary-color);
+border-radius: 4px;
+}
+
+/* Main Content */
 main {
-  max-width: 840px;  
-  margin: 0 auto;   
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 h1 {
   color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 main img {
+  float: right;
+  margin-left: 1rem;
   width: 150px;
   height: auto;
   border: 1px solid var(--img-border);
@@ -41,17 +70,19 @@ main img {
 }
 
 p {
-  padding: 0;
+  margin-bottom: 1rem;
 }
 
-aside {
-  width: 250px;              
-  margin: 20px auto;          
-  border: 1px solid var(--border-color);     
-  padding: var(--aside-padding);              
-  background-color: var(--aside-bg);   
+/* Aside Section */
+aside.box {
+  width: 250px;
+  margin: var(--box-margin) auto;
+  padding: var(--aside-padding);
+  border: 1px solid var(--border-color);
+  background-color: var(--aside-bg);
   color: var(--aside-text);
-  text-align: center;                
+  text-align: center;
+  position: relative;
 }
 
 aside img {
@@ -59,6 +90,26 @@ aside img {
   height: auto;
 }
 
+aside h2.overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255,255,255,0.7);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Box List */
+ul.box {
+  list-style-type: disc;
+  margin: var(--box-margin);
+  padding: var(--aside-padding);
+  border: 1px solid var(--border-color);
+  background-color: var(--aside-bg);
+  color: var(--aside-text);
+}
+
+/* Footer */
 footer {
   margin-top: 20px;
   border-top: 1px solid var(--footer-border);
