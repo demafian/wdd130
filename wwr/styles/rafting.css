@@ -7,7 +7,7 @@
     --font-family: Arial, sans-serif;
 }
 
-/* RESET */
+/* UNIVERSAL SELECTOR RESET */
 * {
     margin: 0;
     padding: 0;
@@ -80,8 +80,9 @@ nav a:hover {
     text-align: center;
     background-color: rgba(255, 183, 3, 0.75);
     color: #fff;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     z-index: 2;
+    text-transform: uppercase;
 }
 
 /* Article overlay */
@@ -95,14 +96,17 @@ nav a:hover {
     padding: 20px;
     border-radius: 8px;
     z-index: 2;
+
+    display: flex;            /* Use flexbox */
+    align-items: center;      /* Vertically center items */
+    gap: 15px;                /* Space between text and image */
 }
 
 .hero article img {
-    float: right;
     width: 125px;
-    margin-left: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    flex-shrink: 0;           /* Prevent image from shrinking */
 }
 
 .hero article::after {
