@@ -21,16 +21,24 @@
     --box-margin: 1rem;
 }
 
+/* Max width for main layout areas */
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 /* Navigation */
 nav {
     background-color: var(--primary-color);
     padding: var(--nav-padding);
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: var(--text-color);
-    display: inline-block;
+    display: block;
     padding: var(--nav-link-padding);
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
@@ -44,26 +52,26 @@ nav a:focus {
     outline: none;
 }
 
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+aside {
+    grid-row: 1;
+}
+
 /* Main Content */
-main {
-    max-width: 840px;
-    margin: 1rem auto;
-    padding: 1rem;
-}
-
-main::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 h1 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: .5rem;
 }
 
 .profile-img {
-    float: right;
     margin-left: 1rem;
     width: 150px;
     height: auto;
@@ -76,7 +84,7 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Box Class - for aside and ul lists */
+/* Box Class */
 .box {
     margin: var(--box-margin);
     padding: var(--aside-padding);
@@ -88,7 +96,6 @@ p {
 
 /* Aside Section */
 aside.box {
-    width: 250px;
     text-align: center;
     position: relative;
 }
@@ -98,20 +105,9 @@ aside img {
     height: auto;
 }
 
-aside h2.overlay {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(255,255,255,0.8);
-    padding: 0.5rem;
-    border-radius: 4px;
-}
-
 /* Unordered List */
 ul.temple-list {
     list-style-type: disc;
-    margin: var(--box-margin) 0;
-    padding: var(--aside-padding);
 }
 
 /* Footer */
@@ -124,24 +120,16 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 600px) {
-    .profile-img {
-        float: none;
-        display: block;
-        margin: 0 auto 1rem auto;
-        width: 100%;
-        max-width: 150px;
-    }
-
-    aside h2.overlay {
-        position: static;
-        background-color: transparent;
-        padding: 0;
-        margin-bottom: 0.5rem;
+    nav {
+        flex-direction: column;
     }
 
     nav a {
-        display: block;
         padding: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
     }
 
     .box {
