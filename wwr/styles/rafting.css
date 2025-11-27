@@ -9,8 +9,8 @@
     --white-color: #fff;
 }
 
-/* RESET - FIX: Universal selector reset */
-* {
+/* GLOBAL STYLES */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,7 +27,7 @@ body {
     min-height: 100vh;
 }
 
-/* 2. Main content should grow to fill available space */
+/* MAIN CONTENT AREA */
 main {
     flex: 1 0 auto;
     width: 90%; 
@@ -39,12 +39,12 @@ main {
 
 /* HEADER */
 header {
-    display: grid;
+    display: grid; 
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: 10px 20px;
     background: var(--primary-color);
-    color: var(--white-color); /* Contrast Fix */
+    color: var(--white-color); 
 }
 /* Logo styles */
 header .logo {
@@ -52,7 +52,7 @@ header .logo {
 }
 /* Navigation styles */
 header nav {
-    display: flex;
+    display: flex; 
     justify-content: flex-end;
     gap: 15px;
 }
@@ -72,16 +72,15 @@ header nav a:hover {
     position: relative;
     width: 100%;
     overflow: hidden;
-    /* HERO IMAGE SCALING FIX */
     height: 60vh; 
     max-height: 500px; 
 }
 /* Ensure the hero image fills the container */
 .hero img {
     width: 100%;
-    height: 100%; /* HERO IMAGE SCALING FIX */
+    height: 100%;
     display: block;
-    object-fit: cover; /* HERO IMAGE SCALING FIX */
+    object-fit: cover; 
 }
 /* Overlay effect */
 .hero::before {
@@ -94,7 +93,7 @@ header nav a:hover {
 /* Hero title styles */
 .hero h1 {
     position: absolute;
-    top: 5%; /* RESPONSIVE POSITIONING */
+    top: 5%; 
     width: 100%;
     padding: 16px;
     text-align: center;
@@ -107,7 +106,7 @@ header nav a:hover {
 /* Hero article styles */
 .hero article {
     position: absolute;
-    bottom: 5%; /* RESPONSIVE POSITIONING */
+    bottom: 5%; 
     left: 20px;
     right: 20px;
     background: rgba(2, 48, 71, 0.95);
@@ -137,7 +136,7 @@ header nav a:hover {
 /* History grid layout */
 .history-grid {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Text | Image | Text */
+    grid-template-columns: 1fr auto 1fr; 
     gap: 20px;
     width: 100%;
     margin: auto;
@@ -174,7 +173,7 @@ figcaption {
 footer {
     background: var(--secondary-color);
     color: var(--white-color); 
-    display: flex;
+    display: flex; 
     align-items: center;
     padding: 15px;
     flex-shrink: 0; 
@@ -188,7 +187,7 @@ footer p {
 }
 /* Social media links styles */
 footer .socialmedia {
-    display: flex;
+    display: flex; 
     gap: 10px;
 }
 /* Social media anchor styles */
