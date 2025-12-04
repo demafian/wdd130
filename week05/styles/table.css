@@ -1,0 +1,46 @@
+
+/* Base table styling */
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  letter-spacing: 1px;
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem 0;
+}
+
+/* Header cells and data cells */
+th, td {
+  border: 1px solid rgb(150 150 150);
+  padding: 8px 12px;
+  text-align: center;
+}
+
+/* Thead and tfoot rows */
+thead tr,
+tfoot tr {
+  background-color: rgb(0 0 0);
+  color: white;
+  font-weight: 700;
+}
+
+/* Caption styling (optional) */
+caption {
+  caption-side: top; 
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Zebra striping for readability (optional enhancement) */
+tbody tr:nth-child(odd) {
+  background-color: rgb(245 245 245);
+}
+tbody tr:nth-child(even) {
+  background-color: rgb(255 255 255);
+}
+
+/* Left-align the first column header cells if desired */
+tbody th[scope="row"] {
+  text-align: left;
+  font-weight: 700;
+}

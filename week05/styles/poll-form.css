@@ -1,0 +1,143 @@
+/* Style 1: Universal Selector Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style 2: Body Styling */
+body {
+    /* Custom font choice */
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 16px; 
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Style 3: Header and h1 */
+header {
+    background-color: #007bff; /* Blue header background */
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Style 4: Form Styling (Grid Layout) */
+form {
+    width: 650px;
+    margin: 0 auto; /* Center the form */
+    padding: 2rem;
+    
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+
+    display: grid;
+    gap: 1rem; /* Grid gap for vertical spacing */
+}
+
+/* Fieldset and Legend not used in this specific HTML, but provided for completeness if structure changes */
+/*
+fieldset {
+  display: grid;
+  grid-gap: .5rem;
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.2);
+  padding: 1rem;
+}
+legend {
+  padding: 0.5rem;
+  color: navy;
+  font-size: 1.3em;
+}
+*/
+
+/* Optional Style: Form Element Typography */
+label, input, button, select, textarea {
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Style 5 & 6: Label and Input/Select/Textarea */
+label {
+    text-align: right;
+    padding-right: 1rem;
+    font-weight: 600;
+}
+
+input:not([type="checkbox"]), select, textarea {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+/* Style 7: Checkbox Styling */
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom; 
+    margin-left: 0.5rem;
+}
+
+/* Style 10: Footer Styling */
+footer {
+    margin: 1rem auto 0;
+    width: 650px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+/* Style 8: Button Styling */
+button {
+    grid-column: 1 / -1; /* Spans across all columns of the form's implicit grid */
+    margin: 1rem 0;
+    background-color: #28a745; 
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    padding: .75rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e7e34;
+}
+
+/* --- Class Selector Styling --- */
+
+/* Style 11: .form-item */
+.form-item {
+    display: grid;
+    align-items: center;
+}
+
+/* Style 12: .column1 (Browser and Pet questions) */
+.column1 {
+    /* Label (3fr) is wider, Input/Select (1fr) is narrow */
+    grid-template-columns: 3fr 1fr;
+    margin: 0.5rem 0;
+}
+
+/* Style 13: .column2 (Full Name and Email) */
+.column2 {
+    /* Label (1fr) is narrower, Input (2fr) is wider */
+    grid-template-columns: 1fr 2fr;
+    margin: 0.5rem 0;
+}
