@@ -116,7 +116,7 @@ header nav a:hover {
     z-index: 2;
 }
 /* Thumbnail image styles */
-.hero article .thumbnail {
+.hero article img {
     width: 125px;
     border-radius: 8px;
     float: right; 
@@ -213,7 +213,7 @@ footer .socialmedia img {
     }
     
     /* Center thumbnail image in hero article */    
-    .hero article .thumbnail {
+    .hero article img {
         float: none; 
         display: block;
         margin: 10px auto;
