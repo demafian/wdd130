@@ -206,13 +206,13 @@ footer .socialmedia img {
     .history-grid {
         grid-template-columns: 1fr;
     }
-    
+    /* Adjust hero article for smaller screens */
     .hero article {
         left: 10px;
         right: 10px;
     }
     
-    
+    /* Center thumbnail image in hero article */    
     .hero article .thumbnail {
         float: none; 
         display: block;
@@ -221,6 +221,7 @@ footer .socialmedia img {
 
     }
 
+/* Adjust adventure grid for medium screens */    
 @media (max-width: 600px) {
     .adventure-grid {
         grid-template-columns: repeat(2, 1fr); 
@@ -228,6 +229,7 @@ footer .socialmedia img {
    
 }
 
+/* Adjust adventure grid for small screens */   
 @media (max-width: 480px) {
     .adventure-grid {
         grid-template-columns: 1fr;
@@ -235,28 +237,31 @@ footer .socialmedia img {
 }
 
 /* --- Contact Page Styles --- */
-
 .contact-main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Company Information Styling */
 .company-info {
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* Company Information Headings and Paragraphs */
 .company-info h1 {
     font-size: 2em;
     color: var(--secondary-color); 
     margin-bottom: 10px;
 }
 
+/* Company Information Paragraphs */
 .company-info p {
     margin: 5px 0;
 }
 
+/* Contact Grid Layout */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns: map/form */
@@ -269,27 +274,30 @@ footer .socialmedia img {
     text-align: center;
 }
 
+/* Responsive iframe for map */
 .map-container iframe {
-    width: 100%; /* Make it fill the grid column */
-    height: 350px; /* Adjust height as needed */
-    border: 1px solid #ccc; /* Optional border for definition */
+    width: 100%; 
+    height: 350px; 
+    border: 1px solid #ccc; 
     border-radius: 5px;
 }
 
 /* Form Styling */
 .contact-form {
     padding: 20px;
-    background-color: #f9f9f9; /* Light background for the form area */
+    background-color: #f9f9f9; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Form Headings */
 .contact-form fieldset {
     border: none;
     padding: 0;
     margin: 0;
 }
 
+/* Form Labels and Inputs */
 .contact-form label,
 .contact-form input[type="text"],
 .contact-form input[type="email"],
@@ -299,59 +307,68 @@ footer .socialmedia img {
     margin-bottom: 10px;
 }
 
+/* Input and Textarea Styles */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box; 
 }
 
+/* Radio Button Group Styling */
 .radio-group {
     margin-bottom: 15px;
 }
 
+/* Radio Button Inputs */
 .radio-group label {
-    display: inline; /* Keep radio labels on the same line as the button */
+    display: inline; 
     margin-right: 20px;
     width: auto;
 }
 
+/* Newsletter Checkbox Styling */
 .newsletter-checkbox {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
+/* Newsletter Checkbox Input */
 .newsletter-checkbox input[type="checkbox"] {
     width: auto;
     margin-right: 10px;
 }
 
+/* Newsletter Checkbox Label */
 .newsletter-checkbox label {
     display: inline;
     width: auto;
 }
 
+/* Textarea Resizing Control */
 .contact-form textarea {
-    resize: vertical; /* Allow vertical resizing, but not horizontal */
+    resize: vertical; 
 }
 
+/* Submit Button Styling */
 .submit-button {
-    background-color: var(--primary-color); /* Used primary color for brand consistency */
+    background-color: var(--primary-color); 
     color: var(--white-color);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.1em;
-    width: 100%; /* Full width button */
+    width: 100%; 
     transition: background-color 0.3s ease;
 }
 
+/* Submit Button Hover Effect */
 .submit-button:hover {
-    background-color: var(--secondary-color); /* Darker hover color */
+    background-color: var(--secondary-color); 
 }
 
 /* Employee Profiles Styling */
@@ -365,30 +382,34 @@ footer .socialmedia img {
     margin-bottom: 20px;
 }
 
+/* Employee Grid Layout */
 .employee-grid {
-    display: flex; /* Using flexbox for 3 items */
+    display: flex; 
     justify-content: space-around;
     align-items: flex-start;
     gap: 20px;
     padding: 0 10px;
 }
 
+/* Individual Employee Figure Styling */
 .employee-grid figure {
     margin: 0;
     text-align: center;
-    flex-basis: 30%; /* Give each figure roughly equal space */
+    flex-basis: 30%; 
 }
 
+/* Employee Image Styling */
 .employee-grid img {
     width: 100%;
-    max-width: 200px; /* Control image size */
+    max-width: 200px; 
     height: auto;
-    border-radius: 50%; /* Circular images for profiles */
+    border-radius: 50%; 
     object-fit: cover;
-    aspect-ratio: 1 / 1; /* Ensures perfect circle */
+    aspect-ratio: 1 / 1; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Employee Figcaption Styling */
 .employee-grid figcaption {
     margin-top: 10px;
     font-style: italic;
@@ -410,7 +431,7 @@ footer .socialmedia img {
     }
 
     .employee-grid figure {
-        flex-basis: 100%;
+        flex-basis: 100%;   
         margin-bottom: 20px;
     }
 }
