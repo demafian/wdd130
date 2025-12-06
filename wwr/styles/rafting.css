@@ -233,3 +233,184 @@ footer .socialmedia img {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Contact Page Styles --- */
+
+.contact-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.company-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.company-info h1 {
+    font-size: 2em;
+    color: var(--secondary-color); 
+    margin-bottom: 10px;
+}
+
+.company-info p {
+    margin: 5px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns: map/form */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Map Styling */
+.map-container {
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 100%; /* Make it fill the grid column */
+    height: 350px; /* Adjust height as needed */
+    border: 1px solid #ccc; /* Optional border for definition */
+    border-radius: 5px;
+}
+
+/* Form Styling */
+.contact-form {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the form area */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-form label,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    display: inline; /* Keep radio labels on the same line as the button */
+    margin-right: 20px;
+    width: auto;
+}
+
+.newsletter-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.newsletter-checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.newsletter-checkbox label {
+    display: inline;
+    width: auto;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing, but not horizontal */
+}
+
+.submit-button {
+    background-color: var(--primary-color); /* Used primary color for brand consistency */
+    color: var(--white-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color); /* Darker hover color */
+}
+
+/* Employee Profiles Styling */
+.employee-profiles {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.employee-profiles h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.employee-grid {
+    display: flex; /* Using flexbox for 3 items */
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.employee-grid figure {
+    margin: 0;
+    text-align: center;
+    flex-basis: 30%; /* Give each figure roughly equal space */
+}
+
+.employee-grid img {
+    width: 100%;
+    max-width: 200px; /* Control image size */
+    height: auto;
+    border-radius: 50%; /* Circular images for profiles */
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Ensures perfect circle */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.employee-grid figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* --- Media Queries for Contact Page Responsiveness --- */
+
+/* Adjust for smaller screens (e.g., mobile) */
+@media screen and (max-width: 768px) {
+    /* Existing media query at 768px applies to history grid, we'll refine the contact page layout here */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack map and form vertically */
+    }
+
+    .employee-grid {
+        flex-direction: column; /* Stack employee profiles vertically */
+        align-items: center;
+    }
+
+    .employee-grid figure {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
